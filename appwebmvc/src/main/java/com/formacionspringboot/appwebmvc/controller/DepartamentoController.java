@@ -33,7 +33,7 @@ public class DepartamentoController {
 	}
 	
 	@PostMapping("departamentos")
-	public String guardarEmpleado(@ModelAttribute("departamentoKey") Departamento departamento) {
+	public String guardarDepartamento(@ModelAttribute("departamentoKey") Departamento departamento) {
 		
 		servicio.guardarDepartamento(departamento);
 		return "redirect:/departamento";

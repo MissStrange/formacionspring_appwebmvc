@@ -35,28 +35,28 @@
 		
 		<div class="container">
 			<div class="row">
-				<h1>Lista de empleados</h1>
+				<h1>Lista de proyectos</h1>
 			</div>
 				
 			<table class="table">
 			  <thead>
 			    <tr>
 			    	<th>Nombre</th>
-			    	<th>Apellido</th>
-			    	<th>Email</th>
-			    	<th>Telefono</th>
+			    	<th>Fecha de inicio</th>
+			    	<th>Fecha de fin</th>
+			    	<th>Activo</th>
 			    	<th>Acciones</th>
 			    </tr>
 			  </thead>
 			  <tbody>
-			    <tr class="table-active" th:each="empleados: ${empleados}">
-			    	<td th:text="${empleados.nombre}"></td>
-			    	<td th:text="${empleados.apellido}"></td>
-			    	<td th:text="${empleados.email}"></td>
-			    	<td th:text="${empleados.telefono}"></td>
+			    <tr class="table-active" th:each="proyectos: ${proyectos}">
+			    	<td th:text="${proyectos.nombre}"></td>
+			    	<td th:text="${proyectos.fechaInicio}"></td>
+			    	<td th:text="${proyectos.fechaFin}"></td>
+			    	<td th:text="${proyectos.activo}"></td>
 			    	<td>
-			    		<a th:href="@{empleados/editar/{id}(id=${empleados.id})}" class="btn btn-info">Editar</a>
-			    		<a th:href="@{empleados/borrar/{id}(id=${empleados.id})}" class="btn btn-danger">Eliminar</a>
+			    		<a th:href="@{proyectos/editar/{id}(id=${proyectos.id})}" class="btn btn-info">Editar</a>
+			    		<a th:href="@{proyectos/borrar/{id}(id=${proyectos.id})}" class="btn btn-danger">Eliminar</a>
 			    	</td>
 			    </tr >		 
 			  </tbody>
