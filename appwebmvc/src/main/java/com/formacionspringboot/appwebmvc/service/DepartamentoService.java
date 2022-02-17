@@ -6,7 +6,7 @@ import com.formacionspringboot.appwebmvc.entity.Departamento;
 
 public interface DepartamentoService {
 
-public List<Departamento> listarTodosDepartamentos();
+	public List<Departamento> listarTodosDepartamentos();
 	
 	public Departamento guardarDepartamento(Departamento departamento);
 	
